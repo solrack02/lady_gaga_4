@@ -342,25 +342,32 @@ xmlns="http://www.w3.org/2000/svg"
         , () => {
 	const [sttPlay, setPlay] = React.useState(false);
 
+	const img_prev =
+		'https://firebasestorage.googleapis.com/v0/b/flaxboll.appspot.com/o/skip-back.png?alt=media&token=c5830632-862b-4f42-9328-f6821c1272b9';
+	const img_play =
+		'https://firebasestorage.googleapis.com/v0/b/flaxboll.appspot.com/o/play.png?alt=media&token=51941cc8-1252-4c83-a6f7-4ce2f2b6f9a9';
+	const img_pause =
+		'https://firebasestorage.googleapis.com/v0/b/flaxboll.appspot.com/o/pause.png?alt=media&token=1d906bb6-6ea0-4fae-9d7f-3dfcc5e50e2f';
+	const img_next =
+		'https://firebasestorage.googleapis.com/v0/b/flaxboll.appspot.com/o/skip-forward.png?alt=media&token=66c23108-b7d2-4a6e-8435-4aaba8184a9c';
+
 	const style_1 = {
 		flexDirection: 'row',
 		width: '100%',
-		height: 100,
+		height: 120,
 		alignItems: 'center',
 		justifyContent: 'center',
 	};
 	const style_2 = {
 		flexDirection: 'row',
-		backgroundColor: 'transparent',
 		alignItems: 'center',
 		justifyContent: 'center',
-		paddingRight: 2,
 		borderRadius: 5,
 		width: 20,
 		height: 20,
 	};
 	const style_3 = {
-		backgroundColor: 'darkred',
+		backgroundColor: '#0064FE',
 		alignItems: 'center',
 		justifyContent: 'center',
 		borderRadius: 20,
@@ -369,51 +376,30 @@ xmlns="http://www.w3.org/2000/svg"
 		marginHorizontal: 20,
 	};
 	const style_4 = {
-		color: '#FFF',
-		lineHeight: 0,
-		letterSpacing: 1,
-	};
-	const style_5 = {
-		color: '#FFF',
-		lineHeight: 0,
-		letterSpacing: -2,
-	};
-	const style_6 = {
-		color: '#FFF',
-		fontSize: 12,
-		lineHeight: 0,
-		textAlign: 'center',
-		letterSpacing: -2,
-	};
-	const style_7 = {
-		color: '#FFF',
-		top: -2,
-		fontSize: 12,
-		letterSpacing: -3,
+		width: 20,
+		height: 20,
+		alignItems: 'center',
+		letterSpacing: 'center',
 	};
 
 	return (
-		<>
-			<RN.View style={style_1}>
-				<RN.TouchableOpacity style={style_2} onPress={() => {}}>
-					<RN.Text style={style_7}>{'|'}</RN.Text>
-					<RN.Text style={style_6}>{'◁'}</RN.Text>
-				</RN.TouchableOpacity>
+		<RN.View style={style_1}>
+			<RN.TouchableOpacity style={style_2} onPress={() => {}}>
+				<RN.Image source={{ uri: img_prev }} style={style_4} />
+			</RN.TouchableOpacity>
 
-				<RN.TouchableOpacity style={style_3} onPress={() => setPlay(!sttPlay)}>
-					{sttPlay ? (
-						<RN.Text style={style_5}>{'▷'}</RN.Text>
-					) : (
-						<RN.Text style={style_4}>{'II'}</RN.Text>
-					)}
-				</RN.TouchableOpacity>
+			<RN.TouchableOpacity style={style_3} onPress={() => setPlay(!sttPlay)}>
+				{sttPlay ? (
+					<RN.Image source={{ uri: img_play }} style={style_4} />
+				) : (
+					<RN.Image source={{ uri: img_pause }} style={style_4} />
+				)}
+			</RN.TouchableOpacity>
 
-				<RN.TouchableOpacity style={style_2} onPress={() => {}}>
-					<RN.Text style={style_6}>{'▷'}</RN.Text>
-					<RN.Text style={style_7}>{'|'}</RN.Text>
-				</RN.TouchableOpacity>
-			</RN.View>
-		</>
+			<RN.TouchableOpacity style={style_2} onPress={() => {}}>
+				<RN.Image source={{ uri: img_next }} style={style_4} />
+			</RN.TouchableOpacity>
+		</RN.View>
 	);
 }],
 
