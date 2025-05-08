@@ -30,22 +30,25 @@
         (...args: any) => <Elements.Screen3 pass={{
           pathScreen:"home",
 
-          styles:[`{ flex: 1, backgroundColor: "$var_all.colors.primary" }`],
+          styles:[
+        `{ flex: 1, backgroundColor: "$var_all.colors.primary" }`, `{   alignItems: "center",   justifyContent: "center" }`],
 
-          screenElements:[() => {
-                  const textStyle = {
-                    fontSize: 20,
-                    color: '#fff2',
-                    textAlign:'center',
-                    maxWidth: 200,
-                    // maxWidth: '200px'<= #ATTENTION: Native ERROR! No string!
-                  };
+          screenElements:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
 
-                  return (
-                    <RN.Text style={textStyle}>
-                      {'Adicione Elementos nessa tela!'}
-                    </RN.Text>);
-                }],
+          arrStyles: [
+            `{ fontSize: 22, color: "#FFF", textAlign: "center" }`
+          ],
+
+          children: [
+            `Find Your Favorite Music`
+          ],
+
+          args,
+
+        }}/>],
 
           functions:[()=>{}],
 
