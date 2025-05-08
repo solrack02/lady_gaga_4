@@ -393,7 +393,7 @@ xmlns="http://www.w3.org/2000/svg"
 	};
 
 	return (
-		<RN.View style={{ width: 200, height: '100%' }}>
+		<>
 			<RN.View style={style_1}>
 				<RN.TouchableOpacity style={style_2} onPress={() => {}}>
 					<RN.Text style={style_7}>{'|'}</RN.Text>
@@ -413,7 +413,7 @@ xmlns="http://www.w3.org/2000/svg"
 					<RN.Text style={style_7}>{'|'}</RN.Text>
 				</RN.TouchableOpacity>
 			</RN.View>
-		</RN.View>
+		</>
 	);
 }],
 
