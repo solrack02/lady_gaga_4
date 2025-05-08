@@ -360,7 +360,7 @@ xmlns="http://www.w3.org/2000/svg"
 		height: 20,
 	};
 	const style_3 = {
-		backgroundColor: 'red',
+		backgroundColor: 'darkred',
 		alignItems: 'center',
 		justifyContent: 'center',
 		borderRadius: 20,
