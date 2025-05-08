@@ -378,18 +378,18 @@ xmlns="http://www.w3.org/2000/svg"
 				style={style_2}
 				onPress={() => setNumber(i => Math.max(0, i - 1))}
 			>
-				<RN.Text style={style_4}>>></RN.Text>
+				<RN.Text style={style_4}>{'>>'}</RN.Text>
 			</RN.Pressable>
 
 			<RN.Pressable
 				style={style_3}
 				onPress={() => setNumber(i => Math.max(0, i - 1))}
 			>
-				<RN.Text style={style_4}>>▷</RN.Text>
+				<RN.Text style={style_4}>▷</RN.Text>
 			</RN.Pressable>
 
 			<RN.Pressable style={style_2} onPress={() => setNumber(i => i + 1)}>
-				<RN.Text style={style_4}><<</RN.Text>
+				<RN.Text style={style_4}>{'<<'}</RN.Text>
 			</RN.Pressable>
 		</RN.View>
 	);
