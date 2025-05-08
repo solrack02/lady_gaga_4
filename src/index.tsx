@@ -351,7 +351,7 @@ xmlns="http://www.w3.org/2000/svg"
 	};
 	const style_2 = {
 		flexDirection: 'row',
-		backgroundColor: '$var_all.colors.primary',
+		backgroundColor: 'red',
 		alignItems: 'center',
 		justifyContent: 'center',
 		paddingRight: 2,
@@ -360,7 +360,7 @@ xmlns="http://www.w3.org/2000/svg"
 		height: 20,
 	};
 	const style_3 = {
-		backgroundColor: '#0064FE',
+		backgroundColor: 'red',
 		alignItems: 'center',
 		justifyContent: 'center',
 		borderRadius: 20,
