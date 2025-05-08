@@ -345,7 +345,7 @@ xmlns="http://www.w3.org/2000/svg"
 	const style_1 = {
 		flexDirection: 'row',
 		width: '100%',
-		height: 80,
+		height: 100,
 		alignItems: 'center',
 		justifyContent: 'center',
 	};
