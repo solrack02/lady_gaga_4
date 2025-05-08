@@ -187,6 +187,7 @@ xmlns="http://www.w3.org/2000/svg"
             args,
           }}/>
         , 
+        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -338,7 +339,61 @@ xmlns="http://www.w3.org/2000/svg"
 
             args,
           }}/>
-        ],
+        , () => {
+	const [sttNumber, setNumber] = React.useState(0);
+	const style_1 = {
+		backgroundColor: '#FFF',
+		flexDirection: 'row',
+		flex: 1,
+		width: 200,
+		alignItems: 'center',
+		justifyContent: 'center',
+	};
+	const style_2 = {
+		backgroundColor: '#0064FE',
+		alignItems: 'center',
+		justifyContent: 'center',
+		borderRadius: 3,
+		width: 20,
+		height: 20,
+	};
+
+	const style_3 = {
+		backgroundColor: '#0064FE',
+		alignItems: 'center',
+		justifyContent: 'center',
+		borderRadius: 20,
+		width: 40,
+		height: 40,
+	};
+
+	const style_4 = {
+		color: '#FFF',
+		lineHeight: 0,
+	};
+
+	return (
+		<RN.View style={style_1}>
+			<RN.Pressable
+				style={style_2}
+				onPress={() => setNumber(i => Math.max(0, i - 1))}
+			>
+				<RN.Text style={style_4}>>></RN.Text>
+			</RN.Pressable>
+
+			<RN.Pressable
+				style={style_3}
+				onPress={() => setNumber(i => Math.max(0, i - 1))}
+			>
+				<RN.Text style={style_4}>>▷</RN.Text>
+			</RN.Pressable>
+
+			<RN.Pressable style={style_2} onPress={() => setNumber(i => i + 1)}>
+				<RN.Text style={style_4}><<</RN.Text>
+			</RN.Pressable>
+		</RN.View>
+	);
+};],
 
           functions:[()=>{}],
 
