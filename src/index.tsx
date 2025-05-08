@@ -393,27 +393,27 @@ xmlns="http://www.w3.org/2000/svg"
 	};
 
 	return (
-		<View style={{ width: 200, height: '100%' }}>
-			<View style={style_1}>
-				<TouchableOpacity style={style_2} onPress={() => {}}>
-					<Text style={style_7}>{'|'}</Text>
-					<Text style={style_6}>{'◁'}</Text>
-				</TouchableOpacity>
+		<RN.View style={{ width: 200, height: '100%' }}>
+			<RN.View style={style_1}>
+				<RN.TouchableOpacity style={style_2} onPress={() => {}}>
+					<RN.Text style={style_7}>{'|'}</RN.Text>
+					<RN.Text style={style_6}>{'◁'}</RN.Text>
+				</RN.TouchableOpacity>
 
-				<TouchableOpacity style={style_3} onPress={() => setPlay(!sttPlay)}>
+				<RN.TouchableOpacity style={style_3} onPress={() => setPlay(!sttPlay)}>
 					{sttPlay ? (
-						<Text style={style_5}>{'▷'}</Text>
+						<RN.Text style={style_5}>{'▷'}</RN.Text>
 					) : (
-						<Text style={style_4}>{'II'}</Text>
+						<RN.Text style={style_4}>{'II'}</RN.Text>
 					)}
-				</TouchableOpacity>
+				</RN.TouchableOpacity>
 
-				<TouchableOpacity style={style_2} onPress={() => {}}>
-					<Text style={style_6}>{'▷'}</Text>
-					<Text style={style_7}>{'|'}</Text>
-				</TouchableOpacity>
-			</View>
-		</View>
+				<RN.TouchableOpacity style={style_2} onPress={() => {}}>
+					<RN.Text style={style_6}>{'▷'}</RN.Text>
+					<RN.Text style={style_7}>{'|'}</RN.Text>
+				</RN.TouchableOpacity>
+			</RN.View>
+		</RN.View>
 	);
 }],
 
