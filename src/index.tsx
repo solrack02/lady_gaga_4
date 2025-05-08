@@ -340,24 +340,25 @@ xmlns="http://www.w3.org/2000/svg"
             args,
           }}/>
         , () => {
-	const [sttNumber, setNumber] = React.useState(0);
+	const [sttPlay, setPlay] = React.useState(false);
+
 	const style_1 = {
-		backgroundColor: '#FFF',
 		flexDirection: 'row',
-		flex: 1,
-		width: 200,
+		width: '100%',
+		height: 80,
 		alignItems: 'center',
 		justifyContent: 'center',
 	};
 	const style_2 = {
+		flexDirection: 'row',
 		backgroundColor: '#0064FE',
 		alignItems: 'center',
 		justifyContent: 'center',
-		borderRadius: 3,
+		paddingRight: 2,
+		borderRadius: 5,
 		width: 20,
 		height: 20,
 	};
-
 	const style_3 = {
 		backgroundColor: '#0064FE',
 		alignItems: 'center',
@@ -365,33 +366,54 @@ xmlns="http://www.w3.org/2000/svg"
 		borderRadius: 20,
 		width: 40,
 		height: 40,
+		marginHorizontal: 20,
 	};
-
 	const style_4 = {
 		color: '#FFF',
 		lineHeight: 0,
+		letterSpacing: 1,
+	};
+	const style_5 = {
+		color: '#FFF',
+		lineHeight: 0,
+		letterSpacing: -2,
+	};
+	const style_6 = {
+		color: '#FFF',
+		fontSize: 12,
+		lineHeight: 0,
+		textAlign: 'center',
+		letterSpacing: -2,
+	};
+	const style_7 = {
+		color: '#FFF',
+		top: -2,
+		fontSize: 12,
+		letterSpacing: -3,
 	};
 
 	return (
-		<RN.View style={style_1}>
-			<RN.Pressable
-				style={style_2}
-				onPress={() => setNumber(i => Math.max(0, i - 1))}
-			>
-				<RN.Text style={style_4}>{'>>'}</RN.Text>
-			</RN.Pressable>
+		<View style={{ width: 200, height: '100%' }}>
+			<View style={style_1}>
+				<TouchableOpacity style={style_2} onPress={() => {}}>
+					<Text style={style_7}>{'|'}</Text>
+					<Text style={style_6}>{'◁'}</Text>
+				</TouchableOpacity>
 
-			<RN.Pressable
-				style={style_3}
-				onPress={() => setNumber(i => Math.max(0, i - 1))}
-			>
-				<RN.Text style={style_4}>▷</RN.Text>
-			</RN.Pressable>
+				<TouchableOpacity style={style_3} onPress={() => setPlay(!sttPlay)}>
+					{sttPlay ? (
+						<Text style={style_5}>{'▷'}</Text>
+					) : (
+						<Text style={style_4}>{'II'}</Text>
+					)}
+				</TouchableOpacity>
 
-			<RN.Pressable style={style_2} onPress={() => setNumber(i => i + 1)}>
-				<RN.Text style={style_4}>{'<<'}</RN.Text>
-			</RN.Pressable>
-		</RN.View>
+				<TouchableOpacity style={style_2} onPress={() => {}}>
+					<Text style={style_6}>{'▷'}</Text>
+					<Text style={style_7}>{'|'}</Text>
+				</TouchableOpacity>
+			</View>
+		</View>
 	);
 }],
 
