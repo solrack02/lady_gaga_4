@@ -351,7 +351,7 @@ xmlns="http://www.w3.org/2000/svg"
 	};
 	const style_2 = {
 		flexDirection: 'row',
-		backgroundColor: 'red',
+		backgroundColor: 'transparent',
 		alignItems: 'center',
 		justifyContent: 'center',
 		paddingRight: 2,
