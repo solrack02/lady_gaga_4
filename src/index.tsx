@@ -33,7 +33,8 @@
           styles:[
         `{ flex: 1, backgroundColor: "$var_all.colors.primary" }`, `{   alignItems: "center",   justifyContent: "center" }`],
 
-          screenElements:[(...args:any) => <Elements.Text pass={{
+          screenElements:[
+        (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -48,7 +49,54 @@
 
           args,
 
+        }}/>, 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+  flexDirection: "row",
+  backgroundColor: "darkred",
+  alignItems: "center",
+  justifyContent: "center",
+  width: 160,
+  height: 28,
+  borderRadius: 5,
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [
+        (...args) => {
+          // ---------- get Function from A_Project Scope
+          return tools.goTo("player");
+        }
+        ]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+  color: "#FFF",
+  textAlign: "center",
+  fontWeight: "bold",
+}`
+          ],
+
+          children: [
+            `Ir p/ Player`
+          ],
+
+          args,
+
         }}/>],
+
+            args,
+          }}/>
+        ],
 
           functions:[()=>{}],
 
