@@ -624,7 +624,7 @@ xmlns="http://www.w3.org/2000/svg"
 	const [sttNumber, setNumber] = React.useState(20);
 
 	const style_1 = {
-		backgroundColor: "#FFF",
+		backgroundColor: "yellow",
 		flexDirection: "row",
 		flex: 1,
 		width: 200,
@@ -636,7 +636,7 @@ xmlns="http://www.w3.org/2000/svg"
 		backgroundColor: "#0064FE",
 		alignItems: "center",
 		justifyContent: "center",
-		borderRadius: 3,
+		borderRadius: 10,
 		width: 20,
 		height: 20
 	};
