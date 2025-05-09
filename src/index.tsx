@@ -132,7 +132,8 @@
   // Atualiza o cronômetro
   React.useEffect(() => {
     const countdown = () => {
-      
+            const now = new Date().getTime();
+      const target = new Date(targetDate).getTime();
     };
 
     const intervalId = setInterval(countdown, 1000);
