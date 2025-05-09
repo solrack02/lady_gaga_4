@@ -116,6 +116,18 @@
     color: '#000',
   };
 
+  // Função para formatar o tempo
+  const formatTime = time => {
+    const days = Math.floor(time / (3600 * 24));
+    const hours = String(Math.floor((time % (3600 * 24)) / 3600)).padStart(
+      2,
+      '0',
+    );
+    const minutes = String(Math.floor((time % 3600) / 60)).padStart(2, '0');
+    const seconds = String(time % 60).padStart(2, '0');
+    return { days, hours, minutes, seconds };
+  };
+
 
 
   return (
