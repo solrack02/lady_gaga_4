@@ -109,11 +109,11 @@
   const style_days = {
     fontSize: 48,
     fontWeight: 'bold',
-    color: '#000',
+    color: '#FFF',
   };
   const style_time = {
     fontSize: 32,
-    color: '#000',
+    color: '#FFF',
   };
 
   // Função para formatar o tempo
