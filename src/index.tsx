@@ -142,6 +142,16 @@
       }
 
 
+      const distance = target - now;
+
+      if (distance <= 0) {
+        setTimeLeft('00:00:00');
+        return;
+      }
+
+
+
+
 
     };
 
