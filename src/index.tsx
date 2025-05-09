@@ -50,6 +50,7 @@
           args,
 
         }}/>, 
+        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -96,7 +97,7 @@
 
             args,
           }}/>
-        ],
+        , undefined],
 
           functions:[()=>{}],
 
