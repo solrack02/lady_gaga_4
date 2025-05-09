@@ -620,7 +620,8 @@ xmlns="http://www.w3.org/2000/svg"
 
             args,
           }}/>
-        , () => {
+        , 
+        () => {
 	const [sttNumber, setNumber] = React.useState(20);
 
 	const style_1 = {
@@ -663,7 +664,22 @@ xmlns="http://www.w3.org/2000/svg"
 			</RN.Pressable>
 		</RN.View>
 	);
-}],
+}, (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{ fontSize: 96, fontWeight: "100" }`
+          ],
+
+          children: [
+            "Escreva..."
+          ],
+
+          args,
+
+        }}/>],
 
           functions:[()=>{}],
 
