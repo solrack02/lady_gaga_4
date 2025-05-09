@@ -562,7 +562,25 @@ xmlns="http://www.w3.org/2000/svg"
   flex: 1,
 }`],
 
-            functions:[()=>{}],            childrenItems:[() =><></>],
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+  color: "#FFF",
+  textAlign: "center",
+}`
+          ],
+
+          children: [
+            "Escreva..."
+          ],
+
+          args,
+
+        }}/>],
 
             args,
           }}/>
