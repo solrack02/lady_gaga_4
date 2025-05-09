@@ -152,6 +152,8 @@
 const timeInSeconds = Math.floor(distance / 1000);
 const { days, hours, minutes, seconds } = formatTime(timeInSeconds);
 
+console.log({ days });
+
 setTimeLeft(`LEFT`);
 
     };
