@@ -134,6 +134,15 @@
     const countdown = () => {
             const now = new Date().getTime();
       const target = new Date(targetDate).getTime();
+
+      // Verifica se a data é válida
+      if (isNaN(target)) {
+        setTimeLeft('Data Inválida');
+        return;
+      }
+
+
+
     };
 
     const intervalId = setInterval(countdown, 1000);
