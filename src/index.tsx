@@ -149,6 +149,7 @@
         return;
       }
 
+const timeInSeconds = Math.floor(distance / 1000);
 formatTime(timeInSeconds);
 
 
