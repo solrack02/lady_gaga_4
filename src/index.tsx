@@ -150,7 +150,7 @@
       }
 
 const timeInSeconds = Math.floor(distance / 1000);
-formatTime(timeInSeconds);
+const { days, hours, minutes, seconds } = formatTime(timeInSeconds);
 
 
 
