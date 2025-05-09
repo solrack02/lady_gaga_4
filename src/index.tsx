@@ -129,7 +129,16 @@
   };
 
 
+  // Atualiza o cronômetro
+  React.useEffect(() => {
+    const countdown = () => {
+      
+    };
 
+    const intervalId = setInterval(countdown, 1000);
+
+    return () => clearInterval(intervalId);
+  }, [targetDate]);
 
   return (
     <RN.View style={style_1}>
