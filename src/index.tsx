@@ -97,7 +97,34 @@
 
             args,
           }}/>
-        , () => <></>],
+        , () => {
+  const targetDate = '2025-12-31T23:59:59';
+  const [timeLeft, setTimeLeft] = React.useState('');
+
+  // Estilo para o cronômetro
+  const style_1 = {
+    alignItems: 'center',
+    justifyContent: 'center',
+  };
+  const style_days = {
+    fontSize: 48,
+    fontWeight: 'bold',
+    color: '#000',
+  };
+  const style_time = {
+    fontSize: 32,
+    color: '#000',
+  };
+
+
+
+  return (
+    <RN.View style={style_1}>
+      <RN.Text style={style_days}>{timeLeft.split('\n')[0]}</RN.Text>
+      <RN.Text style={style_time}>{timeLeft.split('\n')[1]}</RN.Text>
+    </RN.View>
+  );
+}],
 
           functions:[()=>{}],
 
