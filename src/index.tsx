@@ -130,6 +130,7 @@
 
 
 
+
   return (
     <RN.View style={style_1}>
       <RN.Text style={style_days}>{timeLeft.split('\n')[0]}</RN.Text>
