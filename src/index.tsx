@@ -621,7 +621,7 @@ xmlns="http://www.w3.org/2000/svg"
             args,
           }}/>
         , () => {
-	const [sttNumber, setNumber] = React.useState(0);
+	const [sttNumber, setNumber] = React.useState(20);
 
 	const style_1 = {
 		backgroundColor: "#FFF",
